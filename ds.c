@@ -96,7 +96,6 @@ data* find_acc()
 }
 void deposit()
 {
-    system("clear");
     printf("\033[1;33m BANK SERVICES ONLINE PORTAL\t\t\tDATE : %s\033[0m\n",m);
     data* ptr=find_acc();
     if(ptr!=NULL)
@@ -126,7 +125,6 @@ void deposit()
 }
 void withdrawl()
 {
-    system("clear");
     printf("\033[1;33m BANK SERVICES ONLINE PORTAL\t\t\tDATE : %s\033[0m\n",m);
     data* ptr=find_acc();
     if(ptr!=NULL)
@@ -155,7 +153,6 @@ void withdrawl()
 }
 void tranc_hist()
 {
-    system("clear");
     printf("\033[1;33m BANK SERVICES ONLINE PORTAL\t\t\tDATE : %s\033[0m\n",m);
     data* ptr=find_acc();
     if(ptr!=NULL)
@@ -179,7 +176,6 @@ void tranc_hist()
 }
 void check_balance()
 {
-    system("clear");
     printf("\033[1;33m BANK SERVICES ONLINE PORTAL\t\t\tDATE : %s\033[0m\n",m);
     data* ptr=find_acc();
     if(ptr!=NULL)
@@ -190,7 +186,6 @@ void check_balance()
 }
 void delete_acc()
 {
-    system("clear");
     printf("\033[1;33m BANK SERVICES ONLINE PORTAL\t\t\tDATE : %s\033[0m\n",m);
     float amunt;
     data *ptr,*del_acc;
@@ -331,7 +326,6 @@ void addcustomer()
     char b[5];
     for(i=7;m[i]!='\0';i++)
         b[i-7]=m[i];
-    system("clear");
     printf("\033[1;33m BANK SERVICES ONLINE PORTAL\t\t\tDATE : %s\033[0m\n",m);
     cust user;
     count++;
@@ -408,7 +402,6 @@ void addcustomer()
     new_customer=(data*)malloc(sizeof(data));
     new_customer->prev=new_customer->next=NULL;
     new_customer->details=user;
-    system("clear");
     printf("\033[1;33m BANK SERVICES ONLINE PORTAL\t\t\tDATE : %s\033[0m\n",m);
     display(new_customer);
     if(head==NULL)
@@ -425,7 +418,6 @@ void addcustomer()
 }
 void edit_details()
 {
-    system("clear");
     printf("\033[1;33m BANK SERVICES ONLINE PORTAL\t\t\tDATE : %s\033[0m\n",m);
     int ch;
     data* ptr=find_acc();
@@ -451,7 +443,6 @@ void edit_details()
                     scanf(" %s %s %s",ptr->details.birthdate,ptr->details.birthmonth,ptr->details.birthyear);
                     break;
         }
-        system("clear");
         printf("\nUPDATED DETAILS");
         display(ptr);
     }
@@ -459,7 +450,6 @@ void edit_details()
 }
 void search_by_name()
 {
-    system("clear");
     printf("\033[1;33m BANK SERVICES ONLINE PORTAL\t\t\tDATE : %s\033[0m\n",m);
     char fname[20],lname[20];
     printf("\nENTER YOUR First NAME TO SEARCH :: ");
@@ -511,13 +501,13 @@ int main()
                     break;
             case 6: delete_acc();
                     break;
-            case 7: system("clear");
+            case 7: 
                     printf("\033[1;33m BANK SERVICES ONLINE PORTAL\t\t\tDATE : %s\033[0m\n",m);
                     display_accnts();
                     break;
             case 8: edit_details();
                     break;
-            case 9: system("clear");
+            case 9: 
                     printf("\033[1;33m BANK SERVICES ONLINE PORTAL\t\t\tDATE : %s\033[0m\n",m);
                     data *ptr;
                     ptr=find_acc();
@@ -530,7 +520,7 @@ int main()
                     exit(0);
             default:printf("\tINVALID CHOICE\n");
         }
-        printf("\033[1;32m\n\n\t\t   🙂  THANKYOU FOR VISITING  🙂   \n\t\t    HAVE A NICE DAY\n\033[0m");
+        printf("\033[1;32m\n\n\t\t     THANKYOU FOR VISITING     \n\t\t    HAVE A NICE DAY\n\033[0m");
         printf("\n\n\t___________________________________________\n");
     }
     return 0;
