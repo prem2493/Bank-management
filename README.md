@@ -6,11 +6,11 @@ It allows users to create new bank accounts, deposit and withdraw money, view tr
 
   Features
 
-Account Creation: Users can create new bank accounts with a unique account number and PIN.
+Account Creation:      Users can create new bank accounts with a unique account number and PIN.
 
-Deposits and Withdrawals: Account holders can deposit and withdraw money from their accounts.
+Deposits and Withdrawals:      Account holders can deposit and withdraw money from their accounts.
 
-Transaction History: Users can view their transaction history, including details of deposits and withdrawals.
+Transaction History:      Users can view their transaction history, including details of deposits and withdrawals.
 
 Account Balance: Users can check their account balance at any time.
 
